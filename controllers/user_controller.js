@@ -58,4 +58,15 @@ module.exports = {
       res.status(500).send(err);
     }
   },
+
+  renderLogin: async (req, res) => {
+    try {
+      res.status(200).render('Pages/Login', {
+        pageTitle: 'Login Page'
+      });
+    } catch (err) {
+      console.log(err)
+    }
+   
+  }
 };
